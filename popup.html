@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vagal Hum</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>VAGAL HUM</h1>
+      <div class="subtitle">tap · hum along · match the pitch</div>
+    </header>
+
+    <div class="orb" id="orb">
+      <span id="orbLabel">TAP</span>
+    </div>
+
+    <div class="freq-display">
+      <span id="freqValue">120</span><span class="hz">Hz</span>
+    </div>
+    <div class="note-display" id="noteValue">B2 · low chest buzz</div>
+
+    <div class="controls">
+      <input type="range" id="freqSlider" min="80" max="260" value="120" step="1" aria-label="Frequency">
+
+      <div class="presets">
+        <button class="preset-btn" data-freq="110">
+          <div class="preset-label">Low M</div>
+          <div class="preset-freq">110</div>
+        </button>
+        <button class="preset-btn active" data-freq="120">
+          <div class="preset-label">Male</div>
+          <div class="preset-freq">120</div>
+        </button>
+        <button class="preset-btn" data-freq="200">
+          <div class="preset-label">Female</div>
+          <div class="preset-freq">200</div>
+        </button>
+        <button class="preset-btn" data-freq="220">
+          <div class="preset-label">High F</div>
+          <div class="preset-freq">220</div>
+        </button>
+      </div>
+    </div>
+
+    <div class="breath-indicator" id="breathIndicator">&nbsp;</div>
+
+    <div class="instructions">
+      Hum on the exhale. Extend exhales twice as long as inhales.<br>
+      Feel for buzz in your chest and throat.
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
